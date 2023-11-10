@@ -1,0 +1,83 @@
+.modal-wrapper {
+    display: none;
+
+    z-index: 10;
+    position: fixed;
+   
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100); 
+    top: 0;
+    left: 0;
+
+    padding: 0 var(--gutter-xl);
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.687);
+
+    top: -70px;
+	padding-bottom: 70px;
+	transform: translateY(70px);
+}
+
+.modal {
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    width: 95vw;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.8);
+
+    padding: var(--gutter-xl);
+
+    @media(min-width: 760px) {
+        width: 720px;
+    }
+
+}
+
+.form__large {
+    display: grid;
+    grid-template-areas: '. .' '. .' 'button button';
+    gap: var(--gutter-xl);
+
+    @media(max-width: 420px) {
+        grid-template-areas: '.' '.' '.' '.' 'button'
+    }
+}
+
+.form__small {
+    display: grid;
+    grid-template-areas: 'input button';
+    gap: var(--gutter-xl);
+
+    @media(max-width: 420px) {
+        grid-template-areas: 'input' 'button';
+    }
+}
+
+.modal .page-button {
+    grid-area: button;
+    align-self: self-end;
+    width: 100%;
+    padding: var(--gutter-xl);
+    background-color: white;
+}
+
+.modal input {
+    grid-area: input;
+    color: black;
+}
+
+.modal-input__time {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gutter-xl) / 2);
+}

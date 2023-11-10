@@ -1,0 +1,10 @@
+:root{
+    --border-radius: 20px;
+    --border-radius_small: 15px;
+
+    --main-color: #5592ED;
+    --main-color_gradient: linear-gradient(260deg, #5592ed 0%, #4177C7 100%);
+    --second-color_gradient: linear-gradient(93deg, #CCE0FF 0%, #BDD7FF 100%);
+
+    --gutter-xl: clamp(10px, 3vw, 20px);
+}

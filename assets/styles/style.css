@@ -1,0 +1,110 @@
+@font-face {
+    font-weight: 400;
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-weight: 500;
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+    font-weight: 600;
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, serif;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background: #E3E9FF;
+}
+
+.page-container {
+    max-width: 1360px;
+    margin: 0 auto;
+
+    @media(max-width:1360px){
+        padding: 0 var(--gutter-xl);
+    }    
+}
+
+.page-title {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: calc(var(--gutter-xl) * 2);
+
+    font-size: clamp(28px, 3vw, 36px);
+}
+
+.page-content {
+    margin-top: 50px;
+}
+
+.page-button {
+    width: 100%;
+
+    border: 2px solid var(--main-color) ;
+    border-radius: var(--border-radius);
+    padding: var(--gutter-xl) calc(var(--gutter-xl) * 2);
+    background: #E3E9FF;
+    color: black;
+
+    cursor: pointer;
+}
+
+.page-button:hover {
+    background: linear-gradient(260deg, #5592ed, #4177C7);
+    color: white;
+}
+
+.content-delete {
+    position: absolute;
+    top: var(--gutter-xl);
+    right: var(--gutter-xl);
+
+    cursor: pointer;
+}
+
+.content-delete svg {
+    width: clamp(17px, 4vw, 30px);
+    height: clamp(17px, 4vw, 30px);
+    
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gutter-xl) / 2);
+}
+
+span {
+    font-size: clamp(20px, 3vw, 24px);
+}
+
+input{
+    border-radius: var(--border-radius_small);
+    border: 2px solid #5592ED;
+    background-color: #fff;
+    color: black;
+    width: 100%;
+    padding: var(--gutter-xl);
+
+    height: clamp(40px, 5vw, 70px);
+
+}   
+
+input[type=date] {
+    -webkit-min-logical-width: calc(100% - var(--gutter-xl) - var(--gutter-xl) + 5px);
+}
