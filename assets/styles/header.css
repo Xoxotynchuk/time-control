@@ -45,8 +45,17 @@
             border-radius: var(--border-radius_small);
 
             @media(min-width:760px){
-                width: clamp(400px, 2vw, 100%);
+                width: clamp(300px, 2vw, 100%);
             }
+            transition: .4s ease-in-out;
+        }
+        
+
+        @media(min-width:760px){
+            .header-search_input:focus {
+            width: 400px;
+        }
+        
         }
 
         .header-search_button {
@@ -63,6 +72,8 @@
             background-color: transparent;
         }
     }
+
+ 
 }
 
 /* END HEADER */
